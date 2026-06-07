@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blank Exam Template</title>
+    <style>
+      .container {
+        margin: 0 0.5in;
+      }
+      .data-row,
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .name,
+      .date,
+      .period,
+      .exam-type {
+        width: 30%;
+      }
+
+      .problem {
+        width: 45%;
+        min-height: 250px;
+      }
+
+      .pb {
+        page-break-after: always;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="data-row">
+        <div class="name"><p>Name: _____________________________</p></div>
+        <div class="date"><p>Date: _____________________________</p></div>
+      </div>
+      <div class="data-row">
+        <div class="period"><p>Period: _________________________</p></div>
+        <div class="exam-type"><p>Exam type: _________________________</p></div>
+      </div>
+      <!-- begin problems 1 through 6 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pb"></div>
+      <!-- end problems 1 through 6 -->
+      <!-- begin problems 7 through 12 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pb"></div>
+      <!-- end problems 7 through 12 -->
+      <!-- begin problems 13 through 18 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pb"></div>
+      <!-- end problems 13 through 18 -->
+      <!-- begin problems 19 through 24 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pb"></div>
+      <!-- end problems 19 through 24 -->
+      <!-- begin problems 25 through 30 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="pb"></div>
+      <!-- end problems 25 through 30 -->
+      <!-- begin problems 31 through 33 -->
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="problem">
+          <h2></h2>
+          <p></p>
+        </div>
+      </div>
+      <!-- end problems 31 through 33 -->
+    </div>
+    <script>
+      for (var i = 0; i < 33; i++) {
+        var problemHeading = document.querySelectorAll(".problem h2")[i];
+        problemHeading.textContent = `Problem ${i + 1}`;
+      }
+    </script>
+  </body>
+</html>
