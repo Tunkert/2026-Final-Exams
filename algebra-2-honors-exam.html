@@ -127,11 +127,11 @@
       <div class="row">
         <div class="problem">
           <h2></h2>
-          <p></p>
+          <p style="font-size: 2rem"></p>
         </div>
         <div class="problem">
           <h2></h2>
-          <p></p>
+          <p style="font-size: 2rem"></p>
         </div>
       </div>
       <div class="row">
@@ -389,6 +389,35 @@
       var rrr = Math.floor(Math.random() * 5) + 2;
       var sss = Math.floor(Math.random() * 5) + 2;
       // end problem 14 variables
+      // begin problem 15 variables
+      var ttt = Math.floor(Math.random() * 3) + 2;
+      // end problem 15 variables
+      // begin problem 16 variables
+      var uuu = Math.floor(Math.random() * 7) + 2;
+      // end problem 16 variables
+      // begin problem 17 variables
+      var vvv = Math.floor(Math.random() * 6) + 3;
+      // end problem 17 variables
+      // begin problem 18 variables
+      var xxx = Math.floor(Math.random() * 10) + 5;
+      // end problem 18 variables
+      // begin problem 19 variables
+      var yyy = Math.floor(Math.random() * 10) + 5;
+      var zzz = yyy + Math.floor(Math.random() * 3) + 2;
+      // end problem 19 variables
+      // begin problem 20 variables
+      var aaaa = Math.floor(Math.random() * 10) + 5;
+      var bbbb = aaaa + Math.floor(Math.random() * 3) + 2;
+      // end problem 20 variables
+      // begin problem 21 variables
+      var cccc = Math.floor(Math.random() * 10) + 5;
+      // end problem 21 variables
+      // begin problem 22 variables
+      var dddd = Math.floor(Math.random() * 10) + 5;
+      // end problem 22 variables
+      // begin problem 23 variables
+      var eeee = Math.floor(Math.random() * 4) + 3;
+      var ffff = Math.floor(Math.random() * 4) + 3;
       let problemOneFunc = (a, b, c, d, e) => {
         return `Use the Remainder Theorem to find the remainder when P(x) = ${a}x<sup>3</sup> + ${b}x<sup>2</sup> + ${c}x + ${d} is divided by (x - ${e})`;
       };
@@ -564,6 +593,59 @@
         return `(${lll}x + ${mmm})(${nnn}x + ${ooo})`;
       };
       //   end problem 13 & 14 functions
+      // begin problem 15 functions
+      let problemFifteenFunc = (ttt) => {
+        var middleCoefficient = ttt + ttt;
+        var lastConstant = ttt * ttt;
+        return `\\( \\frac{x^2 + ${middleCoefficient}x + ${lastConstant}}{x - ${ttt}} \\times \\frac{x^2 - ${lastConstant}}{x + ${ttt}} \\)`;
+      };
+      let solutionFifteenFunc = (ttt) => {
+        var middleCoefficient = ttt + ttt;
+        var lastConstant = ttt * ttt;
+        return `\\( x^2 + ${middleCoefficient}x + ${lastConstant} \\)`;
+      };
+      // end problem 15 functions
+      // begin problem 17 functions
+      let problemSeventeenFunc = (vvv) => {
+        return `\\( \\frac{x}{x - ${vvv}} = \\frac{${vvv}}{x - ${vvv}} \\), find the solution to this given equation. If there is no solution, explain why.`;
+      };
+      let solutionSeventeenFunc = (vvv) => {
+        return `There is no solution because ${vvv} - ${vvv} yields a denominator of zero, resulting in an extraneous solution.`;
+      };
+      // end problem 17 functions
+      // begin problem 19 functions
+      let problemNineteenFunc = (yyy, zzz) => {
+        return `\\( \\frac{x}{x - ${yyy}} = \\frac{${zzz}}{x - ${yyy}} \\), find the solution to this given equation. If there is no solution, explain why.`;
+      };
+      let solutionNineteenFunc = (zzz) => {
+        return zzz;
+      };
+      // end problem 19 functions
+      // begin problem 21 functions
+      let problemTwentyOneFunc = (cccc) => {
+        return `ln \\( e^{${cccc}} = \\)`;
+      };
+      let solutionTwentyOneFunc = (cccc) => {
+        return cccc;
+      };
+      // end problem 21 functions
+      // begin problem 22 functions
+      let problemTwentyTwoFunc = (cccc) => {
+        return `log \\( 10^{${cccc}} = \\)`;
+      };
+      let solutionTwentyTwoFunc = (cccc) => {
+        return cccc;
+      };
+      // end problem 22 functions
+      // begin problem 23 and 24 functions
+      let problemTwentyThreeFunc = (eeee, ffff) => {
+        var base = eeee;
+        for (var i = 0; i < ffff - 1; i++) {
+          eeee *= base;
+        }
+        return `\\( log_{${base}} ${eeee} = \\)`;
+      };
+      // end problem 23 and 24 functions
       //   problem 1
       var problemOne = document.querySelectorAll(".problem p")[0];
       problemOne.innerHTML = "1) " + problemOneFunc(a, b, c, d, e);
@@ -642,6 +724,52 @@
         "14) " + problemThirteenFunc(ppp, qqq, rrr, sss);
       var solutionFourteen = document.querySelectorAll("ol li")[13];
       solutionFourteen.innerHTML = solutionThirteenFunc(ppp, qqq, rrr, sss);
+      // begin problem 15
+      var problemFifteen = document.querySelectorAll(".problem p")[14];
+      problemFifteen.innerHTML = "15) " + problemFifteenFunc(ttt);
+      var solutionFifteen = document.querySelectorAll("ol li")[14];
+      solutionFifteen.innerHTML = solutionFifteenFunc(ttt);
+      // begin problem 16
+      var problemSixteen = document.querySelectorAll(".problem p")[15];
+      problemSixteen.innerHTML = "16) " + problemFifteenFunc(uuu);
+      var solutionSixteen = document.querySelectorAll("ol li")[15];
+      solutionSixteen.innerHTML = solutionFifteenFunc(uuu);
+      // begin problem 17
+      var problemSeventeen = document.querySelectorAll(".problem p")[16];
+      problemSeventeen.innerHTML = "17) " + problemSeventeenFunc(vvv);
+      var solutionSeventeen = document.querySelectorAll("ol li")[16];
+      solutionSeventeen.innerHTML = solutionSeventeenFunc(vvv);
+      // begin problem 18
+      var problemEighteen = document.querySelectorAll(".problem p")[17];
+      problemEighteen.innerHTML = "18) " + problemSeventeenFunc(xxx);
+      var solutionEighteen = document.querySelectorAll("ol li")[17];
+      solutionEighteen.innerHTML = solutionSeventeenFunc(xxx);
+      // begin problem 19
+      var problemNineteen = document.querySelectorAll(".problem p")[18];
+      problemNineteen.innerHTML = "19) " + problemNineteenFunc(yyy, zzz);
+      var solutionNineteen = document.querySelectorAll("ol li")[18];
+      solutionNineteen.innerHTML = solutionNineteenFunc(zzz);
+      // begin problem 20
+      var problemTwenty = document.querySelectorAll(".problem p")[19];
+      problemTwenty.innerHTML = "20) " + problemNineteenFunc(aaaa, bbbb);
+      var solutionTwenty = document.querySelectorAll("ol li")[19];
+      solutionTwenty.innerHTML = solutionNineteenFunc(bbbb);
+      // begin problem 21
+      var problemTwentyOne = document.querySelectorAll(".problem p")[20];
+      problemTwentyOne.innerHTML = "21) " + problemTwentyOneFunc(cccc);
+      var solutionTwentyOne = document.querySelectorAll("ol li")[20];
+      solutionTwentyOne.innerHTML = solutionTwentyOneFunc(cccc);
+      // begin problem 22
+      var problemTwentyTwo = document.querySelectorAll(".problem p")[21];
+      problemTwentyTwo.innerHTML = "22) " + problemTwentyTwoFunc(dddd);
+      var solutionTwentyTwo = document.querySelectorAll("ol li")[21];
+      solutionTwentyTwo.innerHTML = solutionTwentyTwoFunc(dddd);
+      // begin problem 23
+      var problemTwentyThree = document.querySelectorAll(".problem p")[22];
+      problemTwentyThree.innerHTML =
+        "23) " + problemTwentyThreeFunc(eeee, ffff);
+      var solutionTwentyThree = document.querySelectorAll("ol li")[22];
+      solutionTwentyThree.innerHTML = ffff;
       // loop through headings
       for (var i = 0; i < 33; i++) {
         var problemHeading = document.querySelectorAll(".problem h2")[i];
