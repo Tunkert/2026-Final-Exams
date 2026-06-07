@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algebra II Honors Exam</title>
+    <!-- mathjax code -->
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
+    ></script>
     <style>
       .container {
         margin: 0 0.5in;
@@ -98,11 +104,11 @@
       <div class="row">
         <div class="problem">
           <h2></h2>
-          <p></p>
+          <p style="font-size: 2rem"></p>
         </div>
         <div class="problem">
           <h2></h2>
-          <p></p>
+          <p style="font-size: 2rem"></p>
         </div>
       </div>
       <div class="pb"></div>
@@ -345,6 +351,32 @@
       var ll = (Math.floor(Math.random() * 10) + 4) * 100;
       var mm = (Math.floor(Math.random() * 5) + 2) * 5;
       //   end problem 10 variables
+      //   begin problem 11 variables
+      var nn = Math.floor(Math.random() * 5) + 2;
+      var oo = Math.floor(Math.random() * 5) + 2;
+      var pp = Math.floor(Math.random() * 5) + 2;
+      var qq = Math.floor(Math.random() * 5) + 2;
+      var rr = Math.floor(Math.random() * 5) + 2;
+      var ss = Math.floor(Math.random() * 5) + 2;
+      var tt = Math.floor(Math.random() * 5) + 2;
+      var uu = Math.floor(Math.random() * 5) + 2;
+      var vv = Math.floor(Math.random() * 5) + 2;
+      var xx = Math.floor(Math.random() * 5) + 2;
+      var yy = Math.floor(Math.random() * 5) + 2;
+      //   end problem 11 variables
+      // begin problem 12 variables
+      var zz = Math.floor(Math.random() * 5) + 2;
+      var aaa = Math.floor(Math.random() * 5) + 2;
+      var bbb = Math.floor(Math.random() * 5) + 2;
+      var ccc = Math.floor(Math.random() * 5) + 2;
+      var ddd = Math.floor(Math.random() * 5) + 2;
+      var eee = Math.floor(Math.random() * 5) + 2;
+      var fff = Math.floor(Math.random() * 5) + 2;
+      var ggg = Math.floor(Math.random() * 5) + 2;
+      var hhh = Math.floor(Math.random() * 5) + 2;
+      var iii = Math.floor(Math.random() * 5) + 2;
+      var jjj = Math.floor(Math.random() * 5) + 2;
+      //   end problem 12 variables
       let problemOneFunc = (a, b, c, d, e) => {
         return `Use the Remainder Theorem to find the remainder when P(x) = ${a}x<sup>3</sup> + ${b}x<sup>2</sup> + ${c}x + ${d} is divided by (x - ${e})`;
       };
@@ -417,6 +449,98 @@
         return solution;
       };
       //   end problem 10 functions
+      //   begin problem 11 functions
+      let problemElevenFunc = (nn, oo, pp, qq, rr, ss, tt, uu, vv, xx, yy) => {
+        return `\\( \\frac\{${nn}p^${oo}q^${pp}r^${qq}\}\{${rr}t^${ss}\} \\times \\frac{${tt}t^${uu}}{${vv}p^${xx}r^${yy}} \\) = `;
+      };
+      let solutionElevenFunc = (nn, oo, pp, qq, rr, ss, tt, uu, vv, xx, yy) => {
+        var topCoefficient = nn * tt;
+        var bottomCoefficient = rr * vv;
+        var pValue = oo - xx;
+        var qValue = pp;
+        var rValue = qq - yy;
+        var tValue = uu - ss;
+        if (pValue > 0) {
+          if (rValue > 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}r^${rValue}t^${tValue}}{${bottomCoefficient}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}r^${rValue}}{${bottomCoefficient}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}r^${rValue}}{${bottomCoefficient}t^${-1 * tValue}} \\)`;
+            }
+          } else if (rValue === 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}t^${tValue}}{${bottomCoefficient}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}}{${bottomCoefficient}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}}{${bottomCoefficient}t^${-1 * tValue}} \\)`;
+            }
+          } else {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}t^${tValue}}{${bottomCoefficient}r^${-1 * rValue}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}}{${bottomCoefficient}r^${-1 * rValue}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}p^${pValue}q^${qValue}}{${bottomCoefficient}r^${-1 * rValue}t^${-1 * tValue}} \\)`;
+            }
+          }
+        } else if (pValue === 0) {
+          if (rValue > 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}t^${tValue}}{${bottomCoefficient}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}}{${bottomCoefficient}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}}{${bottomCoefficient}t^${-1 * tValue}} \\)`;
+            }
+          } else if (rValue === 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}t^${tValue}}{${bottomCoefficient}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}t^${-1 * tValue}} \\)`;
+            }
+          } else {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}t^${tValue}}{${bottomCoefficient}r^${rValue}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}r^${rValue}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}r^${rValue}t^${-1 * tValue}} \\)`;
+            }
+          }
+        } else {
+          if (rValue > 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}t^${tValue}}{${bottomCoefficient}p^${pValue}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}}{${bottomCoefficient}p^${pValue}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}r^${rValue}}{${bottomCoefficient}p^${pValue}t^${-1 * tValue}} \\)`;
+            }
+          } else if (rValue === 0) {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}t^${tValue}}{${bottomCoefficient}p^${pValue} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}p^${pValue} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}p^${pValue}t^${tValue}} \\)`;
+            }
+          } else {
+            if (tValue > 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}t^${tValue}}{${bottomCoefficient}p^${pValue}r^${rValue}} \\)`;
+            } else if (tValue === 0) {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}p^${pValue}r^${rValue}} \\)`;
+            } else {
+              return `\\( \\frac{${topCoefficient}q^${qValue}}{${bottomCoefficient}p^${pValue}r^${rValue}t^${tValue}} \\)`;
+            }
+          }
+        }
+      };
+      //   end problem 11 functions
       //   problem 1
       var problemOne = document.querySelectorAll(".problem p")[0];
       problemOne.innerHTML = "1) " + problemOneFunc(a, b, c, d, e);
@@ -470,6 +594,19 @@
       problemTen.innerHTML = "10) " + problemTenFunc(ll, mm);
       var solutionTen = document.querySelectorAll("ol li")[9];
       solutionTen.innerHTML = solutionTenFunc(ll, mm);
+      //   begin problem 11
+      var problemEleven = document.querySelectorAll(".problem p")[10];
+      problemEleven.innerHTML =
+        "11) " + problemElevenFunc(nn, oo, pp, qq, rr, ss, tt, uu, vv, xx, yy);
+      var solutionEleven = document.querySelectorAll("ol li")[10];
+      solutionEleven.innerHTML = `Please check with instructor if you are unsure.`;
+      //   begin problem 12
+      var problemTwelve = document.querySelectorAll(".problem p")[11];
+      problemTwelve.innerHTML =
+        "12) " +
+        problemElevenFunc(zz, aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj);
+      var solutionTwelve = document.querySelectorAll("ol li")[11];
+      solutionTwelve.innerHTML = `Please check with instructor if you are unsure.`;
       // loop through headings
       for (var i = 0; i < 33; i++) {
         var problemHeading = document.querySelectorAll(".problem h2")[i];
