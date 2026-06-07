@@ -117,7 +117,7 @@
       <div class="row">
         <div class="problem">
           <h2></h2>
-          <p></p>
+          <p id="thirteen"></p>
         </div>
         <div class="problem">
           <h2></h2>
@@ -377,6 +377,18 @@
       var iii = Math.floor(Math.random() * 5) + 2;
       var jjj = Math.floor(Math.random() * 5) + 2;
       //   end problem 12 variables
+      //   begin problem 13 variables
+      var lll = Math.floor(Math.random() * 5) + 2;
+      var mmm = Math.floor(Math.random() * 5) + 2;
+      var nnn = Math.floor(Math.random() * 5) + 2;
+      var ooo = Math.floor(Math.random() * 5) + 2;
+      // end problem 13 variables
+      //   begin problem 14 variables
+      var ppp = Math.floor(Math.random() * 5) + 2;
+      var qqq = Math.floor(Math.random() * 5) + 2;
+      var rrr = Math.floor(Math.random() * 5) + 2;
+      var sss = Math.floor(Math.random() * 5) + 2;
+      // end problem 14 variables
       let problemOneFunc = (a, b, c, d, e) => {
         return `Use the Remainder Theorem to find the remainder when P(x) = ${a}x<sup>3</sup> + ${b}x<sup>2</sup> + ${c}x + ${d} is divided by (x - ${e})`;
       };
@@ -541,6 +553,17 @@
         }
       };
       //   end problem 11 functions
+      //   begin problem 13 functions
+      let problemThirteenFunc = (lll, mmm, nnn, ooo) => {
+        var firstCoefficient = lll * nnn;
+        var secondCoefficient = lll * ooo + mmm * nnn;
+        var theConstant = mmm * ooo;
+        return `Factor ${firstCoefficient}x<sup>2</sup> + ${secondCoefficient}x + ${theConstant}.`;
+      };
+      let solutionThirteenFunc = (lll, mmm, nnn, ooo) => {
+        return `(${lll}x + ${mmm})(${nnn}x + ${ooo})`;
+      };
+      //   end problem 13 & 14 functions
       //   problem 1
       var problemOne = document.querySelectorAll(".problem p")[0];
       problemOne.innerHTML = "1) " + problemOneFunc(a, b, c, d, e);
@@ -607,6 +630,18 @@
         problemElevenFunc(zz, aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj);
       var solutionTwelve = document.querySelectorAll("ol li")[11];
       solutionTwelve.innerHTML = `Please check with instructor if you are unsure.`;
+      //   begin problem 13
+      var problemThirteen = document.getElementById("thirteen");
+      problemThirteen.innerHTML =
+        "13) " + problemThirteenFunc(lll, mmm, nnn, ooo);
+      var solutionThirteen = document.querySelectorAll("ol li")[12];
+      solutionThirteen.innerHTML = solutionThirteenFunc(lll, mmm, nnn, ooo);
+      //   begin problem 14
+      var problemFourteen = document.querySelectorAll(".problem p")[13];
+      problemFourteen.innerHTML =
+        "14) " + problemThirteenFunc(ppp, qqq, rrr, sss);
+      var solutionFourteen = document.querySelectorAll("ol li")[13];
+      solutionFourteen.innerHTML = solutionThirteenFunc(ppp, qqq, rrr, sss);
       // loop through headings
       for (var i = 0; i < 33; i++) {
         var problemHeading = document.querySelectorAll(".problem h2")[i];
