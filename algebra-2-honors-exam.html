@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algebra II Honors Exam</title>
+    <title>Algebra II Mid Level Review</title>
     <!-- mathjax code -->
     <script
       id="MathJax-script"
@@ -45,7 +45,7 @@
       </div>
       <div class="data-row">
         <div class="period"><p>Period: _________________________</p></div>
-        <div class="exam-type"><p>Algebra II Honors (Exam Review)</p></div>
+        <div class="exam-type"><p>Algebra II Exam Review - Mid Level</p></div>
       </div>
       <!-- begin problems 1 through 6 -->
       <div class="row">
@@ -418,6 +418,42 @@
       // begin problem 23 variables
       var eeee = Math.floor(Math.random() * 4) + 3;
       var ffff = Math.floor(Math.random() * 4) + 3;
+      // end problem 24 variables
+      var gggg = Math.floor(Math.random() * 4) + 3;
+      var hhhh = Math.floor(Math.random() * 4) + 3;
+      // begin problem 25 variables
+      var iiii = Math.floor(Math.random() * 2);
+      // end problem 25 variables
+      // begin problem 26 variables
+      var jjjj = Math.floor(Math.random() * 2);
+      // end problem 26 variables
+      // begin problem 27 variables
+      var kkkk = Math.floor(Math.random() * 10) + 5;
+      var llll = 15;
+      // end problem 27 variables
+      // begin problem 28 variables
+      var mmmm = Math.floor(Math.random() * 10) + 5;
+      // end problem 28 variables
+      // begin problem 29 variables
+      var nnnn = Math.floor(Math.random() * 10) + 5;
+      var oooo = Math.floor(Math.random() * 10) + 5;
+      // end problem 29 variables
+      // begin problem 30 variables
+      var pppp = Math.floor(Math.random() * 10) + 5;
+      var qqqq = Math.floor(Math.random() * 10) + 5;
+      // end problem 30 variables
+      // begin problem 31 variables
+      var rrrr = Math.floor(Math.random() * 10) + 5;
+      var ssss = 15;
+      // end problem 31 variables
+      // begin problem 32 variables
+      var tttt = Math.floor(Math.random() * 10) + 5;
+      var uuuu = Math.floor(Math.random() * 10) + 5;
+      // end problem 32 variables
+      // begin problem 33 variables
+      var xxxx = Math.floor(Math.random() * 25) + 5;
+      var yyyy = Math.floor(Math.random() * 25) + 5;
+      // end problem 33 variables
       let problemOneFunc = (a, b, c, d, e) => {
         return `Use the Remainder Theorem to find the remainder when P(x) = ${a}x<sup>3</sup> + ${b}x<sup>2</sup> + ${c}x + ${d} is divided by (x - ${e})`;
       };
@@ -646,6 +682,58 @@
         return `\\( log_{${base}} ${eeee} = \\)`;
       };
       // end problem 23 and 24 functions
+      // begin problem 25 and 26 functions
+      let problemTwentyFiveFunc = (iiii) => {
+        if (iiii === 0) {
+          return `Rewrite log <var>x</var> + log <var>y</var> as one logarithm.`;
+        } else {
+          return `Rewrite log <var>x</var> &minus; log <var>y</var> as one logarithm.`;
+        }
+      };
+      let solutionTwentyFiveFunc = (iiii) => {
+        if (iiii === 0) {
+          return `log <var>xy</var>`;
+        } else {
+          return `log \\( \\frac{x}{y} \\)`;
+        }
+      };
+      // end problem 25 and 26 functions
+      // begin problem 27 and 28 functions
+      let problemTwentySevenFunc = (kkkk, llll) => {
+        var angle = kkkk * llll;
+        return `Convert ${angle}&deg; to radians.`;
+      };
+      let solutionTwentySevenFunc = () => {
+        return `Ask your instructor to check your solution.`;
+      };
+      // begin problem 29 and 30 functions
+      let problemTwentyNineFunc = (nnnn, oooo) => {
+        return `Convert \\( \\frac{${nnnn}\\pi}{${oooo}} \\) to degrees.`;
+      };
+      let solutionTwentyNineFunc = () => {
+        return `Ask your instructor to check your solution.`;
+      };
+      // begin problem 31 functions
+      let problemThirtyOneFunc = (rrrr, ssss) => {
+        return `Which Quadrant is ${rrrr * ssss}&deg; in?`;
+      };
+      let solutionThirtyOneFunc = () => {
+        return `Please ask your instructor to check your solution.`;
+      };
+      // begin problem 32 functions
+      let problemThirtyTwoFunc = (tttt, uuuu) => {
+        return `Which quadrant is \\( \\frac{${tttt}\\pi}{${uuuu}} \\) radians in?`;
+      };
+      let solutionThirtyTwoFunc = () => {
+        return `Please ask your instructor to check your solution.`;
+      };
+      // begin problem 33 functions
+      let problemThirtyThreeFunc = (xxxx, yyyy) => {
+        return `Which quadrant is \\( - \\frac{${xxxx}\\pi}{${yyyy}} \\) radians in?`;
+      };
+      let solutionThirtyThreeFunc = () => {
+        return `Please ask your instructor to check your solution.`;
+      };
       //   problem 1
       var problemOne = document.querySelectorAll(".problem p")[0];
       problemOne.innerHTML = "1) " + problemOneFunc(a, b, c, d, e);
@@ -770,6 +858,59 @@
         "23) " + problemTwentyThreeFunc(eeee, ffff);
       var solutionTwentyThree = document.querySelectorAll("ol li")[22];
       solutionTwentyThree.innerHTML = ffff;
+      // begin problem 24
+      var problemTwentyFour = document.querySelectorAll(".problem p")[23];
+      problemTwentyFour.innerHTML = "24) " + problemTwentyThreeFunc(gggg, hhhh);
+      var solutionTwentyFour = document.querySelectorAll("ol li")[23];
+      solutionTwentyFour.innerHTML = hhhh;
+      // begin problem 25
+      var problemTwentyFive = document.querySelectorAll(".problem p")[24];
+      problemTwentyFive.innerHTML = "25) " + problemTwentyFiveFunc(iiii);
+      var solutionTwentyFive = document.querySelectorAll("ol li")[24];
+      solutionTwentyFive.innerHTML = solutionTwentyFiveFunc(iiii);
+      // begin problem 26
+      var problemTwentySix = document.querySelectorAll(".problem p")[25];
+      problemTwentySix.innerHTML = "25) " + problemTwentyFiveFunc(jjjj);
+      var solutionTwentySix = document.querySelectorAll("ol li")[25];
+      solutionTwentySix.innerHTML = solutionTwentyFiveFunc(jjjj);
+      // begin problem 27
+      var problemTwentySeven = document.querySelectorAll(".problem p")[26];
+      problemTwentySeven.innerHTML =
+        "27) " + problemTwentySevenFunc(kkkk, llll);
+      var solutionTwentySeven = document.querySelectorAll("ol li")[26];
+      solutionTwentySeven.innerHTML = solutionTwentySevenFunc();
+      // begin problem 28
+      var problemTwentyEight = document.querySelectorAll(".problem p")[27];
+      problemTwentyEight.innerHTML =
+        "28) " + problemTwentySevenFunc(mmmm, llll);
+      var solutionTwentyEight = document.querySelectorAll("ol li")[27];
+      solutionTwentyEight.innerHTML = solutionTwentySevenFunc();
+      // begin problem 29
+      var problemTwentyNine = document.querySelectorAll(".problem p")[28];
+      problemTwentyNine.innerHTML = "29) " + problemTwentyNineFunc(nnnn, oooo);
+      var solutionTwentyNine = document.querySelectorAll("ol li")[28];
+      solutionTwentyNine.innerHTML = solutionTwentyNineFunc();
+      // begin problem 30
+      var problemThirty = document.querySelectorAll(".problem p")[29];
+      problemThirty.innerHTML = "30) " + problemTwentyNineFunc(pppp, qqqq);
+      var solutionThirty = document.querySelectorAll("ol li")[29];
+      solutionThirty.innerHTML = solutionTwentyNineFunc();
+      // begin problem 31
+      var problemThirtyOne = document.querySelectorAll(".problem p")[30];
+      problemThirtyOne.innerHTML = "31) " + problemThirtyOneFunc(rrrr, ssss);
+      var solutionThirtyOne = document.querySelectorAll("ol li")[30];
+      solutionThirtyOne.innerHTML = solutionThirtyOneFunc();
+      // begin problem 32
+      var problemThirtyTwo = document.querySelectorAll(".problem p")[31];
+      problemThirtyTwo.innerHTML = "32) " + problemThirtyTwoFunc(tttt, uuuu);
+      var solutionThirtyTwo = document.querySelectorAll("ol li")[31];
+      solutionThirtyTwo = solutionThirtyTwoFunc();
+      // begin problem 33
+      var problemThirtyThree = document.querySelectorAll(".problem p")[32];
+      problemThirtyThree.innerHTML =
+        "33) " + problemThirtyThreeFunc(xxxx, yyyy);
+      var solutionThirtyThree = document.querySelectorAll("ol li")[32];
+      solutionThirtyThree = solutionThirtyThreeFunc();
       // loop through headings
       for (var i = 0; i < 33; i++) {
         var problemHeading = document.querySelectorAll(".problem h2")[i];
